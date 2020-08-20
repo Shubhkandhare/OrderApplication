@@ -20,5 +20,16 @@ namespace OrderApplication.Controllers.Tests
             //Assert
             Assert.AreEqual("PhysicalProduct", result.ViewName);
         }
+
+        [TestMethod()]
+        public void PhysicalProductTest()
+        {
+            //Arrange
+            OrderController orderController = new OrderController();
+            //Act
+            var result = orderController.PhysicalProduct() as ViewResult;
+            //Assert
+            Assert.IsNotNull(result);
+        }
     }
 }
