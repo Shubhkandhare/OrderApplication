@@ -11,5 +11,8 @@ namespace OrderApplication.Models
         public string PaymentType { get; set; }
     }
 
-
+    public class PaymentTypesCollection
+    {
+        public List<PaymentTypes> paymentTypes { get; set; }
+    }
 }
