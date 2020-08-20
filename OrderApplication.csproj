@@ -8,4 +8,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+    <Exec Command="npm install" />
+    <Exec Command="bower install" />
+    <Exec Command="gulp clean" />
+    <Exec Command="gulp min" />
+  </Target>
 </Project>
