@@ -31,5 +31,17 @@ namespace OrderApplication.Controllers.Tests
             //Assert
             Assert.IsNotNull(result);
         }
+
+        
+        [TestMethod()]
+        public void BooksProductTest()
+        {
+            //Arrange
+            OrderController orderController = new OrderController();
+            //Act
+            var result = orderController.Books() as ViewResult;
+            //Assert
+            Assert.IsNotNull(result);
+        }
     }
 }
