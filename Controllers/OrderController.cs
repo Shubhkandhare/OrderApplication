@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using OrderApplication.Models;
 
 namespace OrderApplication.Controllers
 {
     public class OrderController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            return View();
+            PaymentTypesCollection paymentType = new PaymentTypesCollection();
+            var viewname = paymentType.paymentTypes.Where(p => p.Id == id).Select(p => p.PaymentType).ToArray();
+            return View(viewname[0]);
         }
 
         public IActionResult PhysicalProduct()
