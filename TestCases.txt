@@ -43,5 +43,28 @@ namespace OrderApplication.Controllers.Tests
             //Assert
             Assert.IsNotNull(result);
         }
+
+        [TestMethod()]
+        public void VideoProductTest()
+        {
+            //Arrange
+            OrderController orderController = new OrderController();
+            //Act
+            var result = orderController.Video() as ViewResult;
+            //Assert
+            Assert.IsNotNull(result);
+        }
+
+
+        [TestMethod()]
+        public void MembershipProductTest()
+        {
+            //Arrange
+            OrderController orderController = new OrderController();
+            //Act
+            var result = orderController.Membership() as ViewResult;
+            //Assert
+            Assert.IsNotNull(result);
+        }
     }
 }
