@@ -18,6 +18,8 @@ namespace OrderApplication.Controllers
 
         public IActionResult PhysicalProduct()
         {
+            string strPackagingSlip = "Your Payment is received and your shipping is ready.";
+            ViewBag.PackagingSlip = strPackagingSlip;
             return View();
         }
 
