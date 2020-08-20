@@ -12,5 +12,25 @@ namespace OrderApplication.Controllers
         {
             return View();
         }
+
+        public IActionResult PhysicalProduct()
+        {
+            return View();
+        }
+
+        public IActionResult Books()
+        {
+            return View();
+        }
+
+        public IActionResult Video()
+        {
+            return View();
+        }
+
+        public IActionResult Membership()
+        {
+            return View();
+        }
     }
 }
