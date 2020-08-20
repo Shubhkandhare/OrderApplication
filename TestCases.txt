@@ -1,0 +1,24 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OrderApplication.Controllers;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OrderApplication.Controllers.Tests
+{
+    [TestClass()]
+    public class OrderControllerTests
+    {
+        [TestMethod()]
+        public void IndexTest()
+        {
+            //Arrange
+            OrderController orderController = new OrderController();
+            //Act
+            var result = orderController.Index(1) as ViewResult;
+            //Assert
+            Assert.AreEqual("PhysicalProduct", result.ViewName);
+        }
+    }
+}
