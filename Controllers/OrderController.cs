@@ -13,7 +13,10 @@ namespace OrderApplication.Controllers
         {
             PaymentTypesCollection paymentType = new PaymentTypesCollection();
             var viewname = paymentType.paymentTypes.Where(p => p.Id == id).Select(p => p.PaymentType).ToArray();
-            return View(viewname[0]);
+            if (id != 0)
+                return View(viewname[0]);
+            else
+                return View();
         }
 
         public IActionResult PhysicalProduct()
