@@ -25,6 +25,8 @@ namespace OrderApplication.Controllers
 
         public IActionResult Books()
         {
+            string strDuplicateCopyMessage = "This is duplicate copy for Royalty Department.";
+            ViewBag.DuplicateCopyMessage = strDuplicateCopyMessage;
             return View();
         }
 
